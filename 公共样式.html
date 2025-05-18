@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>内江木偶戏非遗传承</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!--Font Awesome 图标库 -->
+    <style>
+        /* 公共样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: #f5f3ef;
+        }
+
+        /* 左侧导航栏 */
+        .nav-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background: #8B4513;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 40px;
+        }
+
+        /* 修改导航栏样式部分 */
+        .nav-menu li {
+            margin: 15px 0;
+            position: relative; /* 为伪元素定位提供基准 */
+        }
+
+        .nav-menu a {
+            color: white;
+            display: block; /* 让链接充满父容器 */
+            padding: 10px 15px; /* 增加点击区域 */
+            position: relative;
+            z-index: 1; /* 确保文字在背景上方 */
+            transition: all 0.3s;
+            text-decoration: none; /* 装饰无：去除默认下划线 */
+        }
+
+        /* 悬停背景效果 */
+        .nav-menu a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 80%;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+
+        /* 悬停图标效果 */
+        .nav-menu a::after {
+            content: "➤";
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFD700;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        /* 悬停状态 */
+        .nav-menu a:hover {
+            padding-left: 30px; /* 为图标腾出空间 */
+        }
+
+        .nav-menu a:hover::before {
+            width: 100%; /* 展开背景 */
+        }
+
+        .nav-menu a:hover::after {
+            left: 10px; /* 图标滑动进入 */
+            opacity: 1;
+        }
+
+        /* 当前页面高亮提示 */
+        .nav-menu .current-page a {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* 导航栏下划线 */
+        .nav-menu a.active {
+            border-bottom: 2px solid #FFD700;
+        }
+  
+
+
+        /* 内容区域 */
+        .main-content {
+            margin-left: 240px;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #654321;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-left: 220px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active">首页</a></li>
+            <li><a href="history.html">历史渊源</a></li>
+            <li><a href="art.html">艺术特色</a></li>
+            <li><a href="innovation.html">传承创新</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <!-- 音乐播放器 -->
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
