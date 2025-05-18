@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非遗项目之四川内江木偶戏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/muou.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+
+        .background-slideshow {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            animation: slideShow 24s infinite;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('images/art-bg1.jpg');
+            animation-delay: 0s;
+        }
+        .slide:nth-child(2) {
+            background-image: url('images/art-bg2.jpg');
+            animation-delay: 8s;
+        }
+        .slide:nth-child(3) {
+            background-image: url('images/art-bg3.jpg');
+            animation-delay: 16s;
+        }
+        .slide:nth-child(4) {
+            background-image: url('images/art-bg4.jpg');
+            animation-delay: 24s;
+        }
+
+        @keyframes slideShow {
+            0%, 100% { opacity: 0; }
+            8% { opacity: 1; }
+            30% { opacity: 1; }
+        }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 40px;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-slideshow">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <!-- 天气盒子 -->
+        <div class="weather-box">
+            <div class="weather-info">
+                <span class="city">内江</span>
+                <span class="temp">--°C</span>
+                <i class="weather-icon fas fa-sun"></i>
+            </div>
+            <div class="weather-detail">加载中...</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active">首页</a></li>
+            <li><a href="history.html">历史渊源</a></li>
+            <li><a href="art.html">艺术特色</a></li>
+            <li><a href="innovation.html">传承创新</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
+
+
+    <div class="main-content" style="position: relative; z-index: 1; background: rgba(255,255,255,0.6);">
+        <h1>四川内江木偶戏非遗传承</h1>
+        
+        <section class="home-grid">
+            <article class="history-card portal-card" onclick="location.href='history.html'">
+                <div class="time-stamp">1877</div>
+                <img src="images/home-history.png" alt="历史渊源">
+                <div class="card-content">
+                    <h2><i class="fas fa-history"></i> 百年传承</h2>
+                    <p>从清代戏班到现代剧团，见证五代艺人的坚守与革新</p>
+                    <div class="timeline-points">
+                        <span class="point">起源扎根期</span>
+                        <span class="point">发展鼎盛期</span>
+                        <span class="point">现代传承</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="art-card portal-card" onclick="location.href='art.html'">
+                <img src="images/home-art.png" alt="艺术特色" class="art-icon">
+                <div class="card-content">
+                    <h2><i class="fas fa-paint-brush"></i> 匠心独运</h2>
+                    <ul class="art-features">
+                        <li>写实造型艺术</li>
+                        <li>川剧融合表演</li>
+                        <li>手工精雕工艺</li>
+                    </ul>
+                </div>
+                <div class="floating-logo"></div>
+            </article>
+
+            <article class="innovation-card portal-card" onclick="location.href='innovation.html'">
+                <div class="innovation-badge">NEW</div>
+                <img src="images/home-innovation.png" alt="传承创新">
+                <div class="card-content">
+                    <h2><i class="fas fa-handshake"></i> 跨界融合</h2>
+                    <div class="innovation-tags">
+                        <span>VR技术</span>
+                        <span>动漫IP</span>
+                        <span>国际巡演</span>
+                    </div>
+                    <p>传统技艺与现代科技的完美碰撞</p>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <style>
+    .home-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .portal-card {
+        background: rgba(255,255,255,0.95);
+        border-radius: 12px;
+        padding: 1.5rem;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        min-height: 380px;
+        overflow: hidden;
+    }
+
+    .portal-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .history-card {
+        border-top: 4px solid #8B4513;
+        background: linear-gradient(45deg, rgba(139,69,19,0.1), white);
+    }
+
+    .time-stamp {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.8rem;
+        color: #8B4513;
+        font-weight: bold;
+    }
+
+    
+    .art-card {
+        border-top: 4px solid #D2691E;
+    }
+
+    .art-features li {
+        padding: 12px;
+        margin: 8px 0;
+        background: rgba(139,69,19,0.05);
+        border-radius: 6px;
+    }
+
+    
+    .innovation-card {
+        border-top: 4px solid #CD853F;
+    }
+
+    .innovation-tags span {
+        display: inline-block;
+        padding: 8px 15px;
+        margin: 5px;
+        background: #8B4513;
+        color: white;
+        border-radius: 20px;
+        font-size: 0.9em;
+    }
+
+    .card-content h2 {
+        color: #8B4513;
+        margin-bottom: 1rem;
+    }
+
+    .portal-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+
+    .fa-history, .fa-paint-brush, .fa-handshake {
+        margin-right: 10px;
+    }
+    </style>
+
+    <footer>
+        <div class="social-media">
+            <a href="contact.html#douyin" class="douyin">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="contact.html#bilibili" class="bilibili">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+            <a href="contact.html#weibo" class="weibo">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="contact.html#wechat" class="wechat">
+                <i class="fab fa-weixin"></i>
+                <span>微信</span>
+            </a>
+        </div>
+        <p>© 2025 内江木偶戏保护中心 蜀ICP备XXXXXX号</p>
+        <p>联系方式：0832-XXXXXXX</p>
+    </footer>
+    <script src="js/bgMusic.js" defer></script>
+    <script src="js/weatherService.js" defer></script>
+</body>
+</html>

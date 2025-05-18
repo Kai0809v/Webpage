@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非遗项目之四川内江木偶戏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/muou.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="background-slideshow">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <span class="city">内江</span>
+                <span class="temp">--°C</span>
+                <i class="weather-icon fas fa-sun"></i>
+            </div>
+            <div class="weather-detail">加载中...</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html">历史渊源</a></li>
+            <li><a href="art.html" class="nav-link active">艺术特色</a></li>
+            <li><a href="innovation.html">传承创新</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
+
+    <div class="main-content" style="position: relative; z-index: 1; background: rgba(255,255,255,0.6);">
+        <h1>艺术特色</h1>
+      
+        <div class="feature-grid">
+            <div class="feature-card">
+                <img src="images/shape-art.png" alt="造型艺术" class="feature-icon">
+                <h3>造型艺术</h3>
+                <p>
+                    ● 形象逼真：内江木偶的造型注重写实，无论是人物、动物还是其他形象，都力求栩栩如生。在人物造型上，会根据不同的角色身份、性格特点来设计外貌、服饰等，如传统戏曲中的生、旦、净、末、丑等角色，都有各自典型的造型特征，让观众一眼就能分辨出角色的身份和性格。<br>
+                    ● 色彩鲜艳：木偶的色彩运用大胆而鲜艳，通常采用红、黄、蓝、绿等对比强烈的颜色，通过细腻的绘画技巧，使木偶具有强烈的视觉冲击力。这种色彩风格既符合民间艺术的审美特点，又能在舞台上营造出欢快、热闹的氛围。<br>
+                    ● 制作精细：制作工艺十分精湛，从选材到雕刻、绘画、装配等各个环节都有严格的要求。木偶的身体结构设计巧妙，关节灵活，能够做出各种复杂的动作，如抬手、弯腰、转身、点头等，甚至可以模仿人类的一些细微动作，如眼神的流转、手指的颤动等，展现出高超的制作水平。
+
+                </p>
+            </div>
+            <div class="feature-card">
+                <img src="images/performance.png" alt="表演技巧" class="feature-icon">
+                <h3>表演技巧</h3>
+                <p>
+                    ● 操作灵活：内江木偶戏以杖头木偶为主，演员通过操纵木偶头部及双手的三根木杆来控制木偶的动作。演员经过长期的训练，能够熟练地运用各种技巧，使木偶的动作自然流畅、生动逼真。他们可以让木偶做出快速的武打动作、优雅的舞蹈姿势以及细腻的情感表达，如悲伤时的哭泣、喜悦时的欢笑等，仿佛赋予了木偶生命。<br>
+                    ● 融合多种艺术形式：内江木偶戏在表演中融合了川剧、民间舞蹈、音乐等多种艺术形式。它借鉴了川剧的唱腔、念白和表演程式，使木偶戏具有浓郁的地方文化特色；同时，融入民间舞蹈的优美动作，丰富了木偶戏的表演语汇；在音乐方面，采用了四川民间音乐和传统戏曲音乐，通过锣鼓、二胡、唢呐等乐器的演奏，为表演营造出独特的氛围和情感基调。<br>
+                    ● 具有故事性和趣味性：内江木偶戏的剧目内容丰富多样，既有传统的神话故事、民间传说，也有现代的生活题材。这些剧目通过精彩的情节和生动的表演，传递着积极向上的价值观和人生哲理。在表演过程中，还会加入一些幽默风趣的元素，如滑稽的动作、诙谐的语言等，让观众在欣赏演出的同时，能够感受到欢乐和愉悦。
+
+                </p>
+            </div>
+            <div class="feature-card">
+                <img src="images/culture.png" alt="文化内涵" class="feature-icon">
+                <h3>文化内涵</h3>
+                <p>
+
+                    ● 地域文化特色鲜明：内江木偶戏深深扎根于四川内江的地域文化之中，它反映了当地的历史、民俗、风土人情等。从剧目的选材、音乐的风格到表演的形式，都蕴含着浓郁的四川地方特色，是四川文化的重要载体之一。<br>
+                    ● 传承民间艺术传统：作为一种古老的民间艺术形式，内江木偶戏承载着丰富的民间艺术传统和文化记忆。它在长期的发展过程中，不断吸收和融合民间美术、音乐、舞蹈等多种艺术元素，传承和弘扬了民间艺术的精髓，对于研究民间艺术的发展历程和文化内涵具有重要的价值。
+
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <style>
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            padding-bottom: 236px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 236px;
+            object-fit: cover;
+            border-radius: 0 0 12px 12px;
+            margin: 0;
+        }
+
+        .feature-card h3 {
+            color: #8B4513;
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .feature-card {
+            padding-bottom: 120px; 
+            }
+            .feature-icon {
+                height: 120px;
+            }
+            }
+
+
+        .background-slideshow {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            animation: slideShow 24s infinite;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('images/art-bg1.jpg');
+            animation-delay: 0s;
+        }
+        .slide:nth-child(2) {
+            background-image: url('images/art-bg2.jpg');
+            animation-delay: 8s;
+        }
+        .slide:nth-child(3) {
+            background-image: url('images/art-bg3.jpg');
+            animation-delay: 16s;
+        }
+        .slide:nth-child(4) {
+            background-image: url('images/art-bg4.jpg');
+            animation-delay: 24s;
+        }
+
+        @keyframes slideShow {
+            0%, 100% { opacity: 0; }
+            8% { opacity: 1; }
+            30% { opacity: 1; }
+        }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 40px;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+    </style>
+
+
+    
+
+
+    <footer>
+        <div class="social-media">
+            <a href="contact.html#douyin" class="douyin">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="contact.html#bilibili" class="bilibili">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+            <a href="contact.html#weibo" class="weibo">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="contact.html#wechat" class="wechat">
+                <i class="fab fa-weixin"></i>
+                <span>微信</span>
+            </a>
+        </div>
+        <p>© 2025 内江木偶戏保护中心 蜀ICP备XXXXXX号</p>
+        <p>联系方式：0832-XXXXXXX</p>
+    </footer>
+    <script src="js/bgMusic.js" defer></script>
+    <script src="js/weatherService.js" defer></script>
+</body>
+</html>

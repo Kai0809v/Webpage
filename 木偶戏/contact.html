@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非遗项目之四川内江木偶戏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="icon" href="images/muou.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <span class="city">内江</span>
+                <span class="temp">--°C</span>
+                <i class="weather-icon fas fa-sun"></i>
+            </div>
+            <div class="weather-detail">加载中...</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html">历史渊源</a></li>
+            <li><a href="art.html">艺术特色</a></li>
+            <li><a href="innovation.html">传承创新</a></li>
+            <li><a href="contact.html" class="nav-link active">联系我们</a></li>
+        </ul>
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
+
+
+    <div class="main-content">
+        <h1>联系我们</h1>
+
+        <!-- 新增卡片容器 -->
+        <div class="contact-cards">
+            <!-- 文本卡片 -->
+            <div class="text-card">
+                <h2>非遗传承中心</h2>
+                <p>
+                ● 地址：四川省内江市资中县XX路XX号<br>
+                ● 电话：0832-XXXXXXX<br>
+                ● 开放时间：周二至周日 9:00-17:00<br>
+                也欢迎您通过以下社交媒体与我们联系：
+                </p>
+            </div>
+
+            <!-- 图片卡片容器 -->
+            <div class="platform-grid">
+                <div class="media-card">
+                    <img src="images/social/douyin.png" alt="抖音官方号">
+                    <div class="overlay">扫码关注/观看直播</div>
+                </div>
+                <div class="media-card">
+                    <img src="images/social/bilibili.png" alt="哔哩哔哩">
+                    <div class="overlay">进入频道</div>
+                </div>
+                <div class="media-card">
+                    <img src="images/social/weibo.png" alt="微博">
+                    <div class="overlay">最新动态</div>
+                </div>
+                <div class="media-card">
+                    <img src="images/social/wechat.png" alt="微信公众号">
+                    <div class="overlay">获取资讯/预约演出</div>
+                </div>
+                <div class="media-card">
+                    <img src="images/social/shop.png" alt="周边购买">
+                    <div class="overlay">周边商品/纪念品 购买</div>
+                </div>
+                <div class="media-card">
+                    <img src="images/social/more.png" alt="敬请期待">
+                    <div class="overlay">敬请期待</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <style>
+        /*这里先空着*/
+    </style>
+
+
+
+    <footer>
+        <div class="social-media">
+            <a href="contact.html#douyin" class="douyin">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="contact.html#bilibili" class="bilibili">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+            <a href="contact.html#weibo" class="weibo">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="contact.html#wechat" class="wechat">
+                <i class="fab fa-weixin"></i>
+                <span>微信</span>
+            </a>
+        </div>
+        <p>© 2025 内江木偶戏保护中心 蜀ICP备XXXXXX号</p>
+        <p>联系方式：0832-XXXXXXX</p>
+    </footer>
+    <script src="js/bgMusic.js" defer></script>
+    <script src="js/weatherService.js" defer></script>
+</body>
+</html>

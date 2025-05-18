@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非遗项目之四川内江木偶戏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/muou.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <span class="city">内江</span>
+                <span class="temp">--°C</span>
+                <i class="weather-icon fas fa-sun"></i>
+            </div>
+            <div class="weather-detail">加载中...</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html">历史渊源</a></li>
+            <li><a href="art.html">艺术特色</a></li>
+            <li><a href="innovation.html" class="nav-link active">传承创新</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
+
+
+    <div class="main-content">
+        <h1>四川内江木偶戏非遗传承</h1>
+        <!--
+
+        -->
+        <section class="innovation-section">
+            <article class="category-card">
+                <h2><i class="fas fa-lightbulb"></i> 创新传承</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h3>内容创新</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>结合现代题材</h4>
+                                <p>创作以当代社会热点、生活故事为主题的新剧目，例如环保、科技发展主题，展现现代社会的变化与挑战。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>融合多元文化</h4>
+                                <p>借鉴国外经典童话情节和民族艺术特色，融入国际文化元素，创造具有全球视野的木偶戏作品。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3>形式创新</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>科技融合</h4>
+                                <p>运用VR/AR技术、光影特效和多媒体装置，打造沉浸式舞台体验。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>跨界表演</h4>
+                                <p>结合街舞、说唱等现代艺术形式，开发互动式演出模式。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3>制作创新</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>新型材料</h4>
+                                <p>采用环保材料和特殊质感材料，增强木偶的视觉表现力。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>时尚设计</h4>
+                                <p>融入动漫元素和流行文化，打造年轻化IP形象。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="category-card">
+                <h2><i class="fas fa-seedling"></i> 传统守护</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h3>人才培养</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>校园传承</h4>
+                                <p>中小学开设木偶戏课程，高校设立专业方向培养传承人才。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>师徒制度</h4>
+                                <p>建立传统艺人的收徒激励机制，传承百年技艺精髓。</p>
+                            </div>
+                        </div>
+                    </div>
+
+              
+                    <div class="accordion-item">
+                        <h3>保护研究</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>数字存档</h4>
+                                <p>建立剧本、音乐、工艺的数字化保护数据库。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>学术研究</h4>
+                                <p>开展木偶戏文化内涵与历史价值的学术研究。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3>推广传播</h3>
+                        <div class="sub-points">
+                            <div class="sub-card">
+                                <h4>新媒体宣传</h4>
+                                <p>制作短视频、纪录片进行全媒体矩阵传播。</p>
+                            </div>
+                            <div class="sub-card">
+                                <h4>文化交流</h4>
+                                <p>开展国内外巡演和社区惠民演出。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <style>
+
+    .innovation-section {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .category-card {
+        background: rgba(255,255,255,0.9);
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #eee;
+        margin: 1rem 0;
+    }
+
+    .accordion-item h3 {
+        color: #8B4513;
+        padding: 1rem;
+        transition: all 0.3s;
+    }
+
+    .sub-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .sub-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #8B4513;
+    }
+
+    .sub-card h4 {
+        color: #8B4513;
+        margin-bottom: 0.5rem;
+    }
+
+    .fa-lightbulb, .fa-seedling {
+        margin-right: 10px;
+        color: #8B4513;
+    }
+    </style>
+
+
+    <footer>
+        <div class="social-media">
+            <a href="contact.html#douyin" class="douyin">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="contact.html#bilibili" class="bilibili">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+            <a href="contact.html#weibo" class="weibo">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="contact.html#wechat" class="wechat">
+                <i class="fab fa-weixin"></i>
+                <span>微信</span>
+            </a>
+        </div>
+        <p>© 2025 内江木偶戏保护中心 蜀ICP备XXXXXX号</p>
+        <p>联系方式：0832-XXXXXXX</p>
+    </footer>
+    <script src="js/bgMusic.js" defer></script>
+    <script src="js/weatherService.js" defer></script>
+</body>
+</html>

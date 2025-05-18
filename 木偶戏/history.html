@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非遗项目之四川内江木偶戏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/muou.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="logo-container">
+            <img src="images/mainLogo.png" alt="非遗logo" class="logo">
+            <span class="logo-title">木偶戏</span>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <span class="city">内江</span>
+                <span class="temp">--°C</span>
+                <i class="weather-icon fas fa-sun"></i>
+            </div>
+            <div class="weather-detail">加载中...</div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="history.html" class="nav-link active">历史渊源</a></li>
+            <li><a href="art.html">艺术特色</a></li>
+            <li><a href="innovation.html">传承创新</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <div class="music-player">
+            <audio id="bgm" loop>
+                <source src="music/background.mp3" type="audio/mpeg">
+            </audio>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="progress" value="0" style="width: 80%">
+        </div>
+    </nav>
+    <!--内容 -->
+
+    <div class="main-content">.
+        <h1>内江木偶戏历史</h1>
+        <style>
+            /* 时间线容器样式 */
+            .timeline {
+                position: relative;
+                padding: 40px 0;
+                margin-left: 60px; /* 为时间线留出空间 */
+            }
+            
+            /* 时间线竖线 */
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 0;
+                height: 100%;
+                width: 4px;
+                background: #8B4513;
+            }
+            
+            /* 时间节点通用样式 */
+            .timeline-item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 60px 0;
+                gap: 30px;
+            }
+            
+            /* 交替排列控制 */
+            .timeline-item:nth-child(odd) {
+                flex-direction: row; /* 奇数项：图片在左 */
+            }
+            .timeline-item:nth-child(even) {
+                flex-direction: row-reverse; /* 偶数项：图片在右 */
+            }
+            
+            /* 时间点标志 */
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -46px;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                border: 4px solid #8B4513;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            
+            /* 图片容器 */
+            .timeline-img {
+                flex: 0 0 45%;
+                max-width: 400px;
+            }
+            
+            .timeline-img img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            }
+            
+            /* 文字描述容器 */
+            .timeline-text {
+                flex: 1;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                min-height: 200px;
+            }
+            
+            /* 响应式设计 */
+            @media (max-width: 768px) {
+                .timeline {
+                    margin-left: 30px;
+                }
+                .timeline-item {
+                    flex-direction: column !important;
+                    margin: 40px 0;
+                }
+                .timeline-img {
+                    width: 100%;
+                    max-width: none;
+                }
+                .timeline-item::before {
+                    left: -38px;
+                }
+            }
+        </style>
+        <div class="timeline">
+            <!-- 阶段1 - 图片在左 六百六十六，图片是真难找 -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="images/stage1.png" alt="清代戏班">
+                </div>
+                <div class="timeline-text">
+                    <h3>起源扎根期：清光绪年间（1877 年）</h3>
+                    <p>
+                        ● 据《资州志》记载，资中（资州）中型杖头木偶戏在清光绪年间崭露头角。<br>
+                        ● 彼时，资中地区民间文娱活动丰富，木偶戏深受民众喜爱，“金泰班”“万祥班” 等十多支木偶戏班活跃在城乡各处，成为民众文化生活的重要组成部分。<br>
+                        ● 当时使用的木偶多为 “精木偶”（手掌木偶），小巧玲珑，皆由梨木精心雕刻而成，重量在一斤到两斤左右。这类木偶虽小，但雕刻工艺精湛，面部表情细腻，服饰也制作精良，为资中木偶戏奠定了坚实的艺术基础，资中也因此逐渐有了 “木偶之乡” 的美誉。
+
+                    </p>
+                </div>
+            </div>
+        
+            <!-- 阶段2 - 图片在右 -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="images/stage2.png" alt="剧团成立">
+                </div>
+                <div class="timeline-text">
+                    <h3>初步发展期：1953 年 - 1986 年</h3>
+                    <p>
+                        ● 1953 年，资中县木偶剧团正式成立，成员汇聚了全县各乡镇及周边地区民间木偶队的能工巧匠与艺人，他们带着各自的技艺与经验，为剧团注入多元活力，开启了资中木偶戏规模化、专业化发展的新篇章。<br>
+                        ● 1954 年，剧团更名为 “资中县百花木偶川剧队”，1957 年又重新命名为 “资中县木偶剧团” 。在这一时期，剧团常年活跃于四川内江、资阳、自贡、宜宾、泸州等地，积累了丰富的演出经验，服务了周边市县大量的少年儿童和成人观众，逐步形成了以 “中型杖头木偶” 为主、“布袋木偶” 为辅的表演特色。<br>
+                        ● 1975 年，剧团参加全国木偶皮影戏调演和汇演，凭借出色表现获省文化厅表彰，其艺术水准得到广泛认可，在全国木偶戏领域崭露头角。
+
+                    </p>
+                </div>
+            </div>
+        
+            <!-- 阶段3 - 图片在左 -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="images/stage3.png" alt="波折衰落">
+                </div>
+                <div class="timeline-text">
+                    <h3>波折衰落期：1987 年 - 2005 年</h3>
+                    <p>
+                        ● 1987 年，社会环境发生急剧变化，大众娱乐方式日益多元化，木偶戏受到巨大冲击，观众大量流失。<br>
+                        ● 即便现任资中县木偶剧团团长胡海在这一年经过招考加入木偶剧团，可这竟是此后 20 多年间，剧团唯一一次对外招考。与胡海同一批进入剧团的 20 名演员，因行业发展艰难，纷纷辞职转行。<br>
+                        ● 到 2005 年全县启动国有文艺院团体制改革时，这一批人中仅剩下胡海和另一人还坚守在剧团，而另一人也在 2007 年选择转岗。当时，资中县文工团、川剧团和木偶团三家合并为木偶团，合并后总共仅有 20 多名职工，其中多数是年纪偏大的后勤和行政人员，能够登台表演木偶戏的，包括胡海在内，仅有 4 人，演出几乎停滞，连发放工资都面临困难，资中木偶戏陷入发展的寒冬，濒临失传边缘。
+
+                    </p>
+                </div>
+            </div>
+        
+            <!-- 阶段4 - 图片在右 -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="images/stage4.png" alt="拯救与复兴">
+                </div>
+                <div class="timeline-text">
+                    <h3>改革复兴前期：2006 年 - 2013 年</h3>
+                    <p>
+                        ● 2006 年，胡海担任资中木偶剧团团长，开启了之路。<br>
+                        ● 面对观众流失、节目陈旧的困境，他提出 “换脑子、挣票子、保牌子” 的策略，带领团队大胆创新。将川剧变脸、吐火绝技融入木偶戏，开发木偶书法、长绸舞等新节目。<br>
+                        ● 在制作变脸、吐火木偶时，制作师唐友民历经 4 个多月、尝试十多种点火方式才攻克技术难关。这些创新节目成功吸引观众回流，木偶剧在内江重获关注。​<br>
+                        ● 2007 年，资中中型杖头木偶制作工艺被批准为四川省首批非物质文化遗产保护项目，获得政府资金支持，县财政每年拨专款保障剧团下乡、进学校演出。<br>
+                        ● 2008 年，剧团再次招考新人，为团队注入新鲜血液。<br>
+                        ● 2009 年，通过政府购买服务，开启每年百场非遗进校园活动，让木偶戏走进校园，培养新一代观众。此后，剧团每年新编创 10 余个节目，针对不同受众打造特色演出，进校园融入卡通元素，文化下乡结合少数民族舞蹈等，逐渐在本地市场站稳脚跟。
+
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- 阶段5 - 图片在左 -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="images/stage5.png" alt="现代发展">
+                </div>
+                <div class="timeline-text">
+                    <h3>改革复兴深化期：2014 年 - 至今</h3>
+                    <p>
+                        ● 2014 年 11 月，“中型杖头木偶戏” 经国务院批准列入国家级非物质文化遗产代表性项目名录扩展项目名录，资中也被命名为 “四川省民间文化艺术之乡”，这标志着内江木偶戏迎来新的发展契机。<br>
+                        ● 剧团以此为动力，进一步拓展传承与发展路径，先后在川南幼儿师范高等专科学校、资中水南实验学校等地建立中型杖头木偶戏传习所，在资中县渔耕德苑生态农庄建立木偶戏表演传承基地，在资中县五指山康养生态园建立木偶制作工艺传习基地，构建起多层次的传承体系。<br>
+                        ● 借力文旅融合的东风，资中木偶戏进景区演出成为常态，在罗泉古镇、重龙镇杨柳滩村等地长期驻演，并受邀到峨眉山、东莞、青岛、潍坊等地展演。<br>
+                        ● 2020 年受疫情影响，剧团积极转型，利用抖音等平台录制木偶节目小视频，打造 “剧场 + 景区 + 古镇 + 直播” 的非物质文化展示展演平台。
+                        ● 近年来，剧团演员在全国赛事中屡获佳绩，还多次登上国家级舞台，并赴新西兰、美国、日本、乌克兰等 20 多个国家和地区进行文化艺术交流，荣获 “传承与贡献奖”“全国服务农民、服务基层文化建设先进集体” 等多项荣誉，让内江木偶戏在国际舞台上绽放光彩，实现了从濒临失传走向繁荣发展的华丽蜕变 。<br>
+
+                    </p>
+                </div>
+            </div>
+        
+            
+        </div>
+    </div>
+    
+    <footer>
+        <div class="social-media">
+            <a href="contact.html#douyin" class="douyin">
+                <i class="fab fa-tiktok"></i>
+                <span>抖音</span>
+            </a>
+            <a href="contact.html#bilibili" class="bilibili">
+                <i class="fab fa-bilibili"></i>
+                <span>哔哩哔哩</span>
+            </a>
+            <a href="contact.html#weibo" class="weibo">
+                <i class="fab fa-weibo"></i>
+                <span>微博</span>
+            </a>
+            <a href="contact.html#wechat" class="wechat">
+                <i class="fab fa-weixin"></i>
+                <span>微信</span>
+            </a>
+        </div>
+        <p>© 2025 内江木偶戏保护中心 蜀ICP备XXXXXX号</p>
+        <p>联系方式：0832-XXXXXXX</p>
+    </footer>
+    <script src="js/bgMusic.js" defer></script>
+    <script src="js/weatherService.js" defer></script>
+</body>
+</html>

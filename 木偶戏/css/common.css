@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursor.png'), auto;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f5f3ef;
+    
+}
+/*
+a,
+button,
+[onclick], input, textarea, select {
+    cursor: url('../images/cursor-click.png'), pointer !important;
+}
+
+input, textarea, [contenteditable] {
+    cursor: url('../images/cursor-select.png'), text !important;
+}
+
+::selection {
+    cursor: url('../images/cursor.png'), text !important;
+}
+*/
+
+
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background: #8B4513;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 80px;  /* 固定logo宽度 */
+    height: auto;
+    flex-shrink: 0;  /* 防止图片被压缩 */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-city {/* 这个先不用了 */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logo-title {
+    color: #FFD700;
+    font-size: 1.8rem;
+    font-weight: bold;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+
+
+.nav-menu li {
+    margin: 15px 0;
+    position: relative; 
+}
+
+.nav-menu a {
+    color: white;
+    display: block;
+    padding: 10px 15px; 
+    position: relative;
+    z-index: 1; 
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.nav-menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 80%;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.nav-menu a::after {
+    content: "➤";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FFD700;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+    padding-left: 30px;
+}
+
+.nav-menu a:hover::before {
+    width: 100%;
+}
+
+.nav-menu a:hover::after {
+    left: 10px;
+    opacity: 1;
+}
+
+
+.nav-menu .current-page a {
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+}
+
+.nav-menu a.active {
+    border-bottom: 2px solid #FFD700;
+}
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    min-height: 100vh;
+}
+/* 音乐播放器样式 */
+.music-player {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    background: #FFD700; /* 与导航栏同色 */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 与导航栏相同阴影 */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255,255,255,0.1); /* 添加浅色边框 */
+    margin-right: 1rem;
+}
+
+#playBtn {
+    background: #8B4513;/**/
+    color: #FFD700;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#progress {
+    flex: 1;
+    accent-color: #FFD700; /* 进度条颜色与按钮统一 */
+    height: 4px;
+    border-radius: 2px;
+}
+
+/*天气盒*/
+.weather-box {
+    background: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.city {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.temp {
+    font-size: 1.3em;
+    margin-right: auto;
+}
+
+.weather-icon {
+    font-size: 1.5em;
+}
+
+.weather-detail {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* 社交媒体样式 */
+.social-media {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.social-media a:hover {
+    transform: translateY(-3px);
+}
+
+/* 平台特色颜色 */
+.social-media .douyin { color: #FE2C55; }
+.social-media .bilibili { color: #00A1D6; }
+.social-media .weibo { color: #E6162D; }
+.social-media .wechat { color: #09B83E; }
+
+/* 原有footer样式修改 */
+footer {
+    background: #654321;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-left: 220px;
+    width: calc(100% - 220px);
+}
+
+/* 交互效果 */
+.accordion-item h3:hover {
+    background: rgba(139,69,19,0.1);
+    transform: translateX(10px);
+}
+
+.sub-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.category-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #8B4513;
+    padding-bottom: 1rem;
+}
+
+/* 首页动画效果 */
+.portal-card {
+    perspective: 1000px;
+}
+
+.portal-card:hover .card-content {
+    transform: translateZ(20px);
+}
+
+.card-content {
+    transition: all 0.3s ease-out;
+}
+
+.floating-logo {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: url('../images/logo-icon.png') no-repeat;
+    opacity: 0.1;
+    transition: all 0.3s;
+}
+
+.portal-card:hover .floating-logo {
+    opacity: 0.3;
+    transform: rotate(15deg);
+}
