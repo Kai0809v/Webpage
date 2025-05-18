@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品售卖 - 泸州纸伞</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* 商品售卖页面样式 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 5%;
+            margin: 4rem auto;
+            max-width: 1200px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+    <body>
+        <!-- 共用头部 -->
+        <header class="decorative-border">
+            <div class="logo-header">
+                <img src="images/logo.png" alt="青花瓷logo" width="80">
+                <h1>泸州纸伞</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link"> <span class="nav-icon">🏠</span>
+                    首页
+                </a>
+                <a href="map.html" class="nav-link"><span class="nav-icon">📜</span>
+                    历史沿革
+                </a>
+                <a href="process.html" class="nav-link"><span class="nav-icon">🖌️</span>
+                    制作工艺
+                </a>
+                <a href="shop.html" class="nav-link"><span class="nav-icon">🛡️</span>
+                    守本传薪
+                </a>
+                <a href="sales.html" class="nav-link active"><span class="nav-icon">💰</span>
+                    商品售卖
+                </a>
+            </nav>
+        </header>
+
+    <main>
+        <h2 class="section-title">非遗周边商品售卖</h2>
+        <section class="product-grid">
+            <!-- 商品卡片 1 -->
+            <div class="product-card">
+                <img src="images/product1.jpg" alt="传统纸伞">
+                <h3 class="product-title">传统工艺纸伞</h3>
+                <p class="product-description">采用泸州纸伞传统工艺制作，手工绘制精美图案，具有极高的艺术价值和收藏价值。</p>
+                <p class="product-price">￥288</p>
+            </div>
+            <!-- 商品卡片 2 -->
+            <div class="product-card">
+                <img src="images/product2.jpg" alt="纸伞钥匙链">
+                <h3 class="product-title">纸伞造型钥匙链</h3>
+                <p class="product-description">小巧可爱的纸伞造型钥匙链，是日常搭配和赠送亲友的不错选择。</p>
+                <p class="product-price">￥28</p>
+            </div>
+            <!-- 商品卡片 3 -->
+            <div class="product-card">
+                <img src="images/product3.jpg" alt="纸伞书签">
+                <h3 class="product-title">纸伞主题书签</h3>
+                <p class="product-description">以泸州纸伞为主题设计的书签，精致美观，为阅读增添一份文化气息。</p>
+                <p class="product-price">￥18</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>©2023 泸州纸伞 | 传统工艺的瑰宝</p>
+        <div class="social-links">
+            <a href="#"><img src="images/wechat.png" width="30" height="30"></a>
+            <a href="#"><img src="images/weibo.png" width="30" height="30"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

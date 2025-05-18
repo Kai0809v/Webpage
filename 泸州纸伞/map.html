@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品售卖 - 泸州纸伞</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .history-timeline {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .timeline-container {
+            position: relative;
+            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 时间节点卡片 */
+        .timeline-card {
+            position: relative;
+            width: 80%;
+            margin: 3rem 0;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0;
+            transform: translateY(30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .timeline-card.animate__card {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 时间标记 */
+        .timeline-marker {
+            position: absolute;
+            top: -20px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+
+        /* 内容区域 */
+        .timeline-content {
+            padding: 2.5rem;
+            width: 100%;
+        }
+
+        .era-title {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .era-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .era-period {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .era-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .era-details li {
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 3rem;
+            line-height: 1.6;
+        }
+
+        .era-details li::before {
+            content: '✦';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* 图片区域 */
+        .timeline-image {
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .timeline-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .era-period {
+                font-size: 1.4rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .timeline-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="decorative-border">
+        <div class="logo-header">
+            <img src="images/logo.png" alt="青花瓷logo" width="80">
+            <h1>泸州纸伞</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link"> <span class="nav-icon">🏠</span>
+                首页
+            </a>
+            <a href="map.html" class="nav-link active"><span class="nav-icon">📜</span>
+                历史沿革
+            </a>
+            <a href="process.html" class="nav-link"><span class="nav-icon">🖌️</span>
+                制作工艺
+            </a>
+            <a href="shop.html" class="nav-link"><span class="nav-icon">🛡️</span>
+                守本传薪
+            </a>
+            <a href="sales.html" class="nav-link"><span class="nav-icon">💰</span>
+                商品售卖
+            </a>
+        </nav>
+    </header>
+    <section class="history-timeline">
+        <h2 class="section-title">百年伞韵·历史沿革</h2>
+
+        <div class="timeline-container">
+            <!-- 明代起源 -->
+            <article class="timeline-card animate__card">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3 class="era-title">
+                        <span class="era-icon">🌄</span>
+                        明末清初·技艺初现 (1600-1700)
+                    </h3>
+                    <ul class="era-details">
+                        <li>起源于泸县雨坛乡民间作坊</li>
+                        <li>采用本地楮树皮纸与楠竹</li>
+                        <li>初期仅有素色油纸伞</li>
+                    </ul>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/明清纸伞展示.png" alt="明末清初时期的伞">
+                </div>
+            </article>
+
+            <!-- 民国发展 -->
+            <article class="timeline-card animate__card animate__delay-1">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3 class="era-title">
+                        <span class="era-icon">🎨</span>
+                        民国鼎盛·百花齐放 (1912-1949)
+                    </h3>
+                    <ul class="era-details">
+                        <li>出现分水岭许氏等四大伞坊</li>
+                        <li>创新绢面伞与漆画工艺</li>
+                        <li>年产量突破二十万把</li>
+                    </ul>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/民国纸伞展示 .png" alt="民国时期的伞">
+                </div>
+            </article>
+
+            <!-- 现代传承 -->
+            <article class="timeline-card animate__card animate__delay-2">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3 class="era-title">
+                        <span class="era-icon">🏛️</span>
+                        非遗新生·文化传承 (2008-至今)
+                    </h3>
+                    <ul class="era-details">
+                        <li>2008年列入国家级非遗名录</li>
+                        <li>建立分水古镇纸伞博物馆</li>
+                        <li>现代设计融合传统技艺</li>
+                    </ul>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/现代纸伞展示.png" alt="现代的伞">
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer>
+        <p>©2023 泸州纸伞 | 传统工艺的瑰宝</p>
+        <div class="social-links">
+            <a href="#"><img src="images/wechat.png" width="30" height="30"></a>
+            <a href="#"><img src="images/weibo.png" width="30" height="30"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>泸州纸伞 </title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* 新增播放栏样式 */
+        .image-carousel {
+        width: 56%; /* 容器宽度 */
+        height: 200px;
+        overflow: hidden;
+        margin: 10px auto;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            width: max-content;
+            animation: scroll 10s linear infinite;
+        }
+
+        .carousel-image {
+            width: 150px; /* 单图宽度 */
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 鼠标悬停暂停动画 */
+        .carousel-wrapper:hover {
+            animation-play-state: paused;
+        }
+
+        /* 无限滚动关键帧 */
+        @keyframes scroll {
+        0% { transform: translateX(0); }
+        /* 改为移动原图总宽度的50%，使克隆内容立即衔接 */
+        100% { transform: translateX(calc(-25% - 30px)); }
+    }
+    </style>
+</head>
+
+<body>
+    <header class="decorative-border">
+        <div class="logo-header">
+            <img src="images/logo.png" alt="青花瓷logo" width="80">
+            <h1>泸州纸伞</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link active"> <span class="nav-icon">🏠</span>
+                首页
+            </a>
+            <a href="map.html" class="nav-link"><span class="nav-icon">📜</span>
+                历史沿革
+            </a>
+            <a href="process.html" class="nav-link"><span class="nav-icon">🖌️</span>
+                制作工艺
+            </a>
+            <a href="shop.html" class="nav-link"><span class="nav-icon">🛡️</span>
+                守本传薪
+            </a>
+            <a href="sales.html" class="nav-link"><span class="nav-icon">💰</span>
+                商品售卖
+            </a>
+        </nav>
+    </header>
+    <!-- 新增图片播放栏 -->
+    <div class="image-carousel">
+        <div class="carousel-wrapper" id="carouselWrapper">
+            <!-- 实际展示的图片 -->
+            <img src="images/banner1.jpg" alt="图片1" class="carousel-image">
+            <img src="images/banner2.jpg" alt="图片2" class="carousel-image">
+            <img src="images/banner3.jpg" alt="图片3" class="carousel-image">
+            <img src="images/banner4.jpg" alt="图片4" class="carousel-image">
+            
+        </div>
+    </div>
+
+    <!-- 主要模块 -->
+    <section class="feature-grid">
+        <div class="feature-card">
+            <h3><span class="icon">🏺</span>历史溯源</h3>
+            <p>始于唐宋，盛于元明...</p>
+        </div>
+        <div class="feature-card animate__hover">
+            <h3><span class="icon">📍</span>制作工艺</h3>
+            <p>体验制瓷72道工序</p>
+        </div>
+        <div class="feature-card">
+            <h3><span class="icon">🎓</span>文脉永续</h3>
+            <p>坚守文化根本 | 传承火种延续</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>©2023 泸州纸伞 | 传统工艺的瑰宝</p>
+        <div class="social-links">
+            <a href="#"><img src="images/wechat.png" width="30" height="30"></a>
+            <a href="#"><img src="images/weibo.png" width="30" height="30"></a>
+        </div>
+    </footer>
+
+    <script>
+        const carouselWrapper = document.getElementById('carouselWrapper');
+        const images = carouselWrapper.querySelectorAll('.carousel-image');
+        
+        // 克隆所有图片并追加到wrapper中
+        images.forEach(img => {
+            const clone = img.cloneNode(true);
+            carouselWrapper.appendChild(clone);
+        });
+
+        // 不再需要animationiteration事件监听
+    </script>
+</body>
+
+</html>
+    

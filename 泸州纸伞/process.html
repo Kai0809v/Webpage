@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品售卖 - 泸州纸伞</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        main {
+            /*max-width: 1500px;*/
+            margin: 0 ;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .process-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-step.animate__step {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate__delay-1 {
+            transition-delay: 0.3s;
+        }
+
+        .animate__delay-2 {
+            transition-delay: 0.6s;
+        }
+
+        .animate__delay-3 {
+            transition-delay: 0.9s;
+        }
+
+        .animate__delay-4 {
+            transition-delay: 1.2s;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .step-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .step-content {
+            padding: 2rem;
+        }
+
+        .step-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .step-detail {
+            background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: none;
+        }
+
+        .detail-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            display: block;
+            margin: 1rem auto 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .detail-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .process-step {
+                margin: 1.5rem 0;
+            }
+
+            .step-image {
+                height: 200px;
+            }
+
+            .step-content {
+                padding: 1rem;
+            }
+
+            .step-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+    <title>泸州纸伞制作工艺</title>
+</head>
+
+<body>
+    <!-- 共用头部 -->
+    <header class="decorative-border">
+        <div class="logo-header">
+            <img src="images/logo.png" alt="青花瓷logo" width="80">
+            <h1>泸州纸伞</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link"> <span class="nav-icon">🏠</span>
+            首页
+        </a>
+            <a href="map.html" class="nav-link"><span class="nav-icon">📜</span>
+            历史沿革
+        </a>
+            <a href="process.html" class="nav-link active"><span class="nav-icon">🖌️</span>
+            制作工艺
+        </a>
+            <a href="shop.html" class="nav-link"><span class="nav-icon">🛡️</span>
+            守本传薪
+        </a>
+            <a href="sales.html" class="nav-link"><span class="nav-icon">💰</span>
+            商品售卖
+            </a>
+            </nav>
+    </header>    
+
+    <main>
+        <h2 class="section-title">泸州纸伞五步成艺</h2>
+
+        <section class="process-flow" aria-label="纸伞制作流程">
+            <!-- 第一步 - 伞骨制作 -->
+            <article class="process-step animate__step">
+                <div class="step-number">1</div>
+                <img src="images/step1.jpg" alt="伞骨制作" class="step-image" loading="lazy">
+                <div class="step-content">
+                    <h3 class="step-title">伞骨成架</h3>
+                    <div class="step-detail">
+                        <p>① 精选五年生楠竹或柔韧柳条</p>
+                        <p>② 经蒸煮去糖、阴干防裂处理</p>
+                        <p>③ 手工劈成32根均匀伞骨</p>
+                    </div>
+                    <button class="detail-btn" aria-expanded="false">展开工艺细节</button>
+                </div>
+            </article>
+
+            <!-- 第二步 - 伞面封胶 -->
+            <article class="process-step animate__step animate__delay-1">
+                <div class="step-number">2</div>
+                <img src="images/step2.jpg" alt="伞面封胶" class="step-image" loading="lazy">
+                <div class="step-content">
+                    <h3 class="step-title">纸面天成</h3>
+                    <div class="step-detail">
+                        <p>① 特制楮树皮纸润湿展平</p>
+                        <p>② 天然桃胶逐层裱糊</p>
+                        <p>③ 七日阴干定型</p>
+                    </div>
+                    <button class="detail-btn" aria-expanded="false">展开工艺细节</button>
+                </div>
+            </article>
+
+            <!-- 第三步 - 绘画装饰 -->
+            <article class="process-step animate__step animate__delay-2">
+                <div class="step-number">3</div>
+                <img src="images/step3.jpg" alt="伞面绘画" class="step-image" loading="lazy">
+                <div class="step-content">
+                    <h3 class="step-title">墨韵丹青</h3>
+                    <div class="step-detail">
+                        <p>① 传统矿物颜料调配</p>
+                        <p>② 工笔技法绘制八仙过海</p>
+                        <p>③ 二十四节气主题创作</p>
+                    </div>
+                    <button class="detail-btn" aria-expanded="false">展开工艺细节</button>
+                </div>
+            </article>
+
+            <!-- 第四步 - 多层保护 -->
+            <article class="process-step animate__step animate__delay-3">
+                <div class="step-number">4</div>
+                <img src="images/step4.jpg" alt="上漆保护" class="step-image" loading="lazy">
+                <div class="step-content">
+                    <h3 class="step-title">漆护千年</h3>
+                    <div class="step-detail">
+                        <p>① 生漆打底防潮</p>
+                        <p>② 桐油中层加固</p>
+                        <p>③ 蜂蜡表层润泽</p>
+                    </div>
+                    <button class="detail-btn" aria-expanded="false">展开工艺细节</button>
+                </div>
+            </article>
+
+            <!-- 第五步 - 组装修整 -->
+            <article class="process-step animate__step animate__delay-4">
+                <div class="step-number">5</div>
+                <img src="images/step5.jpg" alt="组装修整" class="step-image" loading="lazy">
+                <div class="step-content">
+                    <h3 class="step-title">终成雅器</h3>
+                    <div class="step-detail">
+                        <p>① 108道缠线固定</p>
+                        <p>② 三天自然定型</p>
+                        <p>③ 逐寸检验开合</p>
+                    </div>
+                    <button class="detail-btn" aria-expanded="false">展开工艺细节</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const detailBtns = document.querySelectorAll('.detail-btn');
+        detailBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const detail = this.previousElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                if (isExpanded) {
+                    detail.style.display = 'none';
+                } else {
+                    detail.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    <!-- 页脚 -->
+    <footer>
+        <p>©2023 泸州纸伞 | 传统工艺的瑰宝</p>
+        <div class="social-links">
+            <a href="#"><img src="images/wechat.png" width="30" height="30"></a>
+            <a href="#"><img src="images/weibo.png" width="30" height="30"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

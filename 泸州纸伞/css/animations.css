@@ -1,0 +1,27 @@
+/* 轮播图动画 */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.carousel-slide {
+    animation: slideIn 1s ease-out;
+}
+
+/* 流程步骤动画 */
+.animate__step {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: stepAppear 0.8s forwards;
+}
+
+@keyframes stepAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__delay-1 {
+    animation-delay: 0.5s;
+}
